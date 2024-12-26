@@ -9,6 +9,11 @@ spring:
         - Path=/api/products/**
         filters:
         - StripPrefix=2
+        - name: SampleCookie
+          args:
+            message: Hola
+            name: user
+            value: Yael
       - id: msvc-items
         uri: lb://msvc-items
         predicates:
